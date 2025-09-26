@@ -8,29 +8,43 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 248 50% 98%;
+    --foreground: 228 39% 23%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 228 39% 23%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 228 39% 23%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 228 39% 23%;
+    --primary-foreground: 0 0% 98%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 220 14.3% 95.9%;
+    --secondary-foreground: 228 39% 23%;
 
-    --muted: 210 40% 96.1%;
+    --muted: 220 14.3% 95.9%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 35 91% 65%;
+    --accent-foreground: 228 39% 23%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
+
+    /* Portfolio specific colors */
+    --hero-gradient: linear-gradient(135deg, hsl(228 39% 23% / 0.95), hsl(230 40% 35% / 0.95));
+    --card-gradient: linear-gradient(145deg, hsl(0 0% 100% / 0.8), hsl(220 14.3% 95.9% / 0.4));
+    --accent-gradient: linear-gradient(135deg, hsl(35 91% 65%), hsl(25 90% 60%));
+    
+    /* Shadows */
+    --shadow-soft: 0 4px 20px hsl(228 39% 23% / 0.08);
+    --shadow-medium: 0 8px 30px hsl(228 39% 23% / 0.12);
+    --shadow-strong: 0 20px 40px hsl(228 39% 23% / 0.15);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-spring: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
