@@ -3,8 +3,8 @@ import { Button } from "@/components/ui/button";
 import heroBackground from "@/assets/hero-background.jpg";
 
 const HeroSection = () => {
-  const scrollToPortfolio = () => {
-    const element = document.getElementById("portfolio");
+  const scrollToCaseStudies = () => {
+    const element = document.getElementById("case-studies");
     element?.scrollIntoView({ behavior: "smooth" });
   };
 
@@ -30,21 +30,20 @@ const HeroSection = () => {
         <div className="space-y-8 animate-in slide-in-from-bottom duration-1000">
           <div className="space-y-4">
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground leading-tight">
-              Product Designer
-              <span className="block text-accent">& Strategist</span>
+              Hi, I'm <span className="text-accent">Alex Johnson</span>
             </h1>
             <p className="text-xl md:text-2xl text-primary-foreground/90 max-w-3xl mx-auto leading-relaxed">
-              I craft digital experiences that solve real problems and delight users through thoughtful design and strategic thinking.
+              A passionate product designer with 5+ years of experience creating user-centered digital solutions. I specialize in transforming complex problems into intuitive, beautiful experiences that drive business results.
             </p>
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button
-              onClick={scrollToPortfolio}
+              onClick={scrollToCaseStudies}
               size="lg"
               className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-8 py-3 rounded-lg shadow-medium hover:shadow-strong transition-all duration-300 hover:scale-105"
             >
-              View My Work
+              View Case Studies
               <ArrowDown className="ml-2 h-5 w-5" />
             </Button>
             <Button

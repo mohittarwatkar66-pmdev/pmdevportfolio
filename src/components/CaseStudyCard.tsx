@@ -1,18 +1,25 @@
 import { ExternalLink, ArrowRight } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 
-interface PortfolioCardProps {
+interface CaseStudyCardProps {
+  id: string;
   title: string;
   description: string;
   image: string;
   tags: string[];
-  link?: string;
   className?: string;
   style?: React.CSSProperties;
 }
 
-const PortfolioCard = ({ title, description, image, tags, link, className, style }: PortfolioCardProps) => {
+const CaseStudyCard = ({ id, title, description, image, tags, className, style }: CaseStudyCardProps) => {
+  const navigate = useNavigate();
+
+  const handleViewCaseStudy = () => {
+    navigate(`/case-study/${id}`);
+  };
+
   return (
     <Card style={style} className={`group overflow-hidden shadow-soft hover:shadow-strong transition-all duration-300 hover:-translate-y-2 bg-card-gradient backdrop-blur-sm ${className}`}>
       <div className="relative overflow-hidden">
@@ -44,15 +51,17 @@ const PortfolioCard = ({ title, description, image, tags, link, className, style
           {description}
         </p>
         
-        {link && (
-          <Button variant="ghost" className="p-0 h-auto text-accent hover:text-accent/80 group/btn">
-            View Case Study
-            <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-200 group-hover/btn:translate-x-1" />
-          </Button>
-        )}
+        <Button 
+          onClick={handleViewCaseStudy}
+          variant="ghost" 
+          className="p-0 h-auto text-accent hover:text-accent/80 group/btn"
+        >
+          View Case Study
+          <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-200 group-hover/btn:translate-x-1" />
+        </Button>
       </CardContent>
     </Card>
   );
 };
 
-export default PortfolioCard;
+export default CaseStudyCard;

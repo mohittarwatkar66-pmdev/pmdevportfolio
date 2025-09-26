@@ -1,7 +1,7 @@
 import { Mail, Phone, MapPin, User, Briefcase, Award, Coffee } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import HeroSection from "@/components/HeroSection";
-import PortfolioCard from "@/components/PortfolioCard";
+import CaseStudyCard from "@/components/CaseStudyCard";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -11,27 +11,13 @@ import project2 from "@/assets/project-2.jpg";
 import project3 from "@/assets/project-3.jpg";
 
 const Index = () => {
-  const portfolioItems = [
+  const caseStudies = [
     {
+      id: "ecommerce-mobile-app",
       title: "E-Commerce Mobile App",
       description: "Redesigned the entire shopping experience for a major retail brand, resulting in 40% increase in mobile conversions and improved user satisfaction scores.",
       image: project1,
-      tags: ["Mobile App", "UX Research", "E-commerce"],
-      link: "#"
-    },
-    {
-      title: "Analytics Dashboard",
-      description: "Created a comprehensive data visualization platform that helped enterprise clients make data-driven decisions faster and more effectively.",
-      image: project2,
-      tags: ["Dashboard", "Data Viz", "B2B"],
-      link: "#"
-    },
-    {
-      title: "Fintech Banking App",
-      description: "Designed a secure and intuitive banking experience focused on millennials, achieving 95% user adoption rate within the first quarter.",
-      image: project3,
-      tags: ["Fintech", "Mobile", "Security"],
-      link: "#"
+      tags: ["Mobile App", "UX Research", "E-commerce"]
     }
   ];
 
@@ -49,31 +35,38 @@ const Index = () => {
       {/* Hero Section */}
       <HeroSection />
       
-      {/* Portfolio Section */}
-      <section id="portfolio" className="py-20 bg-background">
+      {/* Case Studies Section */}
+      <section id="case-studies" className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Featured Case Studies
+              Case Studies
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Explore how I've helped companies solve complex design challenges and achieve their business goals through user-centered design.
+              Explore detailed case studies of my product design work, including research, design process, and measurable results.
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {portfolioItems.map((item, index) => (
-              <PortfolioCard
-                key={index}
+            {caseStudies.map((item, index) => (
+              <CaseStudyCard
+                key={item.id}
+                id={item.id}
                 title={item.title}
                 description={item.description}
                 image={item.image}
                 tags={item.tags}
-                link={item.link}
                 className="animate-in slide-in-from-bottom duration-500"
                 style={{ animationDelay: `${index * 150}ms` } as React.CSSProperties}
               />
             ))}
+          </div>
+          
+          <div className="text-center mt-12">
+            <p className="text-muted-foreground mb-4">More case studies coming soon...</p>
+            <Button variant="outline" className="border-accent/30 text-accent hover:bg-accent/10">
+              Add New Case Study
+            </Button>
           </div>
         </div>
       </section>
