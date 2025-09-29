@@ -14,10 +14,10 @@ const Index = () => {
   const caseStudies = [
     {
       id: "ecommerce-mobile-app",
-      title: "E-Commerce Mobile App",
-      description: "Redesigned the entire shopping experience for a major retail brand, resulting in 40% increase in mobile conversions and improved user satisfaction scores.",
+      title: "Swish 10-minute Food Delivery",
+      description: "Developed comprehensive product strategy to increase user retention from 12% to 25% through personalized experiences, feedback loops, and automated rewards system.",
       image: project1,
-      tags: ["Mobile App", "UX Research", "E-commerce"]
+      tags: ["Product Strategy", "User Retention", "Food Delivery"]
     }
   ];
 

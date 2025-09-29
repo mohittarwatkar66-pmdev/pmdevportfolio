@@ -6,23 +6,55 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import Navigation from "@/components/Navigation";
 import { useState } from "react";
 
-// Mock data - replace with actual data source
+// Import all slides
+import slide1 from "@/assets/slides/slide-1.jpg";
+import slide2 from "@/assets/slides/slide-2.jpg";
+import slide3 from "@/assets/slides/slide-3.jpg";
+import slide4 from "@/assets/slides/slide-4.jpg";
+import slide5 from "@/assets/slides/slide-5.jpg";
+import slide6 from "@/assets/slides/slide-6.jpg";
+import slide7 from "@/assets/slides/slide-7.jpg";
+import slide8 from "@/assets/slides/slide-8.jpg";
+import slide9 from "@/assets/slides/slide-9.jpg";
+import slide10 from "@/assets/slides/slide-10.jpg";
+import slide11 from "@/assets/slides/slide-11.jpg";
+import slide12 from "@/assets/slides/slide-12.jpg";
+import slide13 from "@/assets/slides/slide-13.jpg";
+import slide14 from "@/assets/slides/slide-14.jpg";
+import slide15 from "@/assets/slides/slide-15.jpg";
+import slide16 from "@/assets/slides/slide-16.jpg";
+import slide17 from "@/assets/slides/slide-17.jpg";
+import slide18 from "@/assets/slides/slide-18.jpg";
+import slide19 from "@/assets/slides/slide-19.jpg";
+import slide20 from "@/assets/slides/slide-20.jpg";
+import slide21 from "@/assets/slides/slide-21.jpg";
+import slide22 from "@/assets/slides/slide-22.jpg";
+import slide23 from "@/assets/slides/slide-23.jpg";
+import slide24 from "@/assets/slides/slide-24.jpg";
+import slide25 from "@/assets/slides/slide-25.jpg";
+import slide26 from "@/assets/slides/slide-26.jpg";
+
+// Case study data based on actual presentation
 const caseStudies = {
   "ecommerce-mobile-app": {
-    title: "E-Commerce Mobile App",
-    subtitle: "Redesigning the shopping experience",
-    description: "A comprehensive redesign of a major retail brand's mobile application, focusing on improving user experience and increasing conversion rates.",
-    challenge: "The existing mobile app had a 60% cart abandonment rate and poor user reviews citing confusing navigation and slow checkout process.",
-    solution: "I conducted extensive user research, created user personas, and redesigned the entire user journey with a focus on streamlined navigation and one-click purchasing.",
+    title: "Swish 10-minute Food Delivery",
+    subtitle: "The Swish Loop: Fuelling Trust, Feedback, and Habit",
+    description: "A comprehensive product strategy to increase user retention and engagement for Swish, a hyperlocal instant food delivery platform designed to provide fresh, ready-to-eat meals in under 10 minutes.",
+    challenge: "Large number of people drop-off after the first time usage of the app, creating a high churn rate for the post order experience. Only 12% of users were reordering within 7 days.",
+    solution: "Implemented a multi-feature approach including personalized recommendations, feedback loops, gamification elements, and automated rewards system to address key pain points around food quality, delivery delays, and coupon usage.",
     results: [
-      "40% increase in mobile conversions",
-      "25% reduction in cart abandonment",
-      "4.8/5 star rating improvement",
-      "15% increase in user retention"
+      "Goal: Increase 7-day reordering rate from 12% to 25%",
+      "Addressed food quality through personalization",
+      "Compensation system for delivery delays", 
+      "Automatic application of rewards and cashback"
     ],
-    tags: ["Mobile App", "UX Research", "E-commerce"],
+    tags: ["Product Strategy", "User Retention", "Food Delivery"],
     image: "/src/assets/project-1.jpg",
-    slides: null // Will be replaced with actual file upload
+    slides: [
+      slide1, slide2, slide3, slide4, slide5, slide6, slide7, slide8, slide9, slide10,
+      slide11, slide12, slide13, slide14, slide15, slide16, slide17, slide18, slide19, slide20,
+      slide21, slide22, slide23, slide24, slide25, slide26
+    ]
   }
 };
 
@@ -34,13 +66,8 @@ const CaseStudyDetail = () => {
   
   const caseStudy = id ? caseStudies[id as keyof typeof caseStudies] : null;
 
-  // Mock slides for demonstration - replace with actual uploaded slides
-  const mockSlides = [
-    "/placeholder.svg?height=400&width=600&text=Slide+1",
-    "/placeholder.svg?height=400&width=600&text=Slide+2", 
-    "/placeholder.svg?height=400&width=600&text=Slide+3",
-    "/placeholder.svg?height=400&width=600&text=Slide+4"
-  ];
+  // Get actual slides from case study data
+  const actualSlides = caseStudy?.slides || [];
 
   if (!caseStudy) {
     return (
@@ -153,8 +180,8 @@ const CaseStudyDetail = () => {
               <div className="space-y-6">
                 <h3 className="text-xl font-semibold text-foreground text-center">Presentation Slides</h3>
                 
-                {/* For demo purposes, showing slides. In real app, check if slides exist */}
-                {mockSlides.length > 0 && !isViewingSlides ? (
+                {/* Check if actual slides exist */}
+                {actualSlides.length > 0 && !isViewingSlides ? (
                   <div className="text-center space-y-4">
                     <p className="text-muted-foreground">Slides are available for this case study</p>
                     <div className="flex flex-wrap gap-3 justify-center">
@@ -191,16 +218,16 @@ const CaseStudyDetail = () => {
                     <div className="relative">
                       <Carousel className="w-full max-w-3xl mx-auto">
                         <CarouselContent>
-                          {mockSlides.map((slide, index) => (
+                          {actualSlides.map((slide, index) => (
                             <CarouselItem key={index}>
                               <div className="relative aspect-video bg-muted rounded-lg overflow-hidden shadow-lg">
                                 <img 
                                   src={slide} 
                                   alt={`Slide ${index + 1}`}
-                                  className="w-full h-full object-cover"
+                                  className="w-full h-full object-contain"
                                 />
                                 <div className="absolute bottom-4 right-4 bg-black/70 text-white px-3 py-1 rounded-full text-sm">
-                                  {index + 1} / {mockSlides.length}
+                                  {index + 1} / {actualSlides.length}
                                 </div>
                               </div>
                             </CarouselItem>
