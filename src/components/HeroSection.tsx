@@ -1,4 +1,4 @@
-import { ArrowDown, Mail, Github, Linkedin } from "lucide-react";
+import { ArrowDown, Mail, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroBackground from "@/assets/hero-background.jpg";
 
