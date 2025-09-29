@@ -74,7 +74,7 @@ const Index = () => {
                   About Me
                 </h2>
                 <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                  I'm a passionate product designer with over 5 years of experience creating digital experiences that users love. I believe great design happens when creativity meets strategy, and I'm always looking for ways to push the boundaries of what's possible.
+                  Aspiring Product Manager with 3 years of software development experience in C++ and service-oriented architecture, eager to blend technical expertise with product thinking to build impactful solutions.I believe great design happens when creativity meets strategy, and I'm always looking for ways to push the boundaries of what's possible.
                 </p>
                 <p className="text-lg text-muted-foreground leading-relaxed">
                   My approach combines user research, business strategy, and creative problem-solving to deliver solutions that not only look beautiful but also drive real results for businesses and their users.
