@@ -62,12 +62,6 @@ const HeroSection = () => {
               href="#"
               className="text-primary-foreground/70 hover:text-accent transition-colors duration-200 hover:scale-110 transform"
             >
-              <Github className="h-6 w-6" />
-            </a>
-            <a
-              href="#"
-              className="text-primary-foreground/70 hover:text-accent transition-colors duration-200 hover:scale-110 transform"
-            >
               <Linkedin className="h-6 w-6" />
             </a>
             <a

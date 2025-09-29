@@ -24,7 +24,6 @@ const Index = () => {
   const skills = [
     { icon: User, title: "User Research", description: "Deep dive into user needs and behaviors" },
     { icon: Briefcase, title: "Product Strategy", description: "Aligning design with business objectives" },
-    { icon: Award, title: "Design Systems", description: "Creating scalable and consistent experiences" },
     { icon: Coffee, title: "Prototyping", description: "Bringing ideas to life through iteration" }
   ];
 
@@ -82,11 +81,7 @@ const Index = () => {
                 </p>
               </div>
               
-              <div className="grid grid-cols-2 gap-6">
-                <div className="text-center p-4">
-                  <div className="text-3xl font-bold text-accent mb-1">50+</div>
-                  <div className="text-sm text-muted-foreground">Projects Completed</div>
-                </div>
+              <div className="grid grid-cols-1 gap-6">
                 <div className="text-center p-4">
                   <div className="text-3xl font-bold text-accent mb-1">5+</div>
                   <div className="text-sm text-muted-foreground">Years Experience</div>
@@ -105,87 +100,6 @@ const Index = () => {
                 </Card>
               ))}
             </div>
-          </div>
-        </div>
-      </section>
-      
-      {/* Contact Section */}
-      <section id="contact" className="py-20 bg-background">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Let's Work Together
-            </h2>
-            <p className="text-xl text-muted-foreground">
-              Have a project in mind? I'd love to hear about it and discuss how we can bring your vision to life.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <div className="space-y-8">
-              <div>
-                <h3 className="text-xl font-semibold text-foreground mb-4">Get in Touch</h3>
-                <p className="text-muted-foreground mb-6">
-                  I'm always excited to work on new projects and collaborate with amazing people. Drop me a message and let's create something incredible together.
-                </p>
-              </div>
-              
-              <div className="space-y-4">
-                <div className="flex items-center space-x-3">
-                  <Mail className="h-5 w-5 text-accent" />
-                  <span className="text-muted-foreground">hello@yourportfolio.com</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <Phone className="h-5 w-5 text-accent" />
-                  <span className="text-muted-foreground">+1 (555) 123-4567</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <MapPin className="h-5 w-5 text-accent" />
-                  <span className="text-muted-foreground">San Francisco, CA</span>
-                </div>
-              </div>
-            </div>
-            
-            <Card className="p-6 shadow-medium bg-card-gradient">
-              <CardContent className="p-0">
-                <form className="space-y-6">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div>
-                      <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
-                        Name
-                      </label>
-                      <Input id="name" type="text" placeholder="Your name" />
-                    </div>
-                    <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
-                        Email
-                      </label>
-                      <Input id="email" type="email" placeholder="your@email.com" />
-                    </div>
-                  </div>
-                  <div>
-                    <label htmlFor="subject" className="block text-sm font-medium text-foreground mb-2">
-                      Subject
-                    </label>
-                    <Input id="subject" type="text" placeholder="Project inquiry" />
-                  </div>
-                  <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
-                      Message
-                    </label>
-                    <Textarea
-                      id="message"
-                      rows={5}
-                      placeholder="Tell me about your project..."
-                      className="resize-none"
-                    />
-                  </div>
-                  <Button className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-semibold py-3 rounded-lg shadow-medium hover:shadow-strong transition-all duration-300">
-                    Send Message
-                  </Button>
-                </form>
-              </CardContent>
-            </Card>
           </div>
         </div>
       </section>
