@@ -62,12 +62,6 @@ const Index = () => {
             ))}
           </div>
           
-          <div className="text-center mt-12">
-            <p className="text-muted-foreground mb-4">More case studies coming soon...</p>
-            <Button variant="outline" className="border-accent/30 text-accent hover:bg-accent/10">
-              Add New Case Study
-            </Button>
-          </div>
         </div>
       </section>
       

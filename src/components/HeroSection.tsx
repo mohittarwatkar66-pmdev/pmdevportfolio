@@ -30,7 +30,7 @@ const HeroSection = () => {
         <div className="space-y-8 animate-in slide-in-from-bottom duration-1000">
           <div className="space-y-4">
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground leading-tight">
-              Hi, I'm <span className="text-accent">Alex Johnson</span>
+              Hi, I'm <span className="text-accent">Mohit Tarwatkar</span>
             </h1>
             <p className="text-xl md:text-2xl text-primary-foreground/90 max-w-3xl mx-auto leading-relaxed">
               A passionate product designer with 5+ years of experience creating user-centered digital solutions. I specialize in transforming complex problems into intuitive, beautiful experiences that drive business results.
