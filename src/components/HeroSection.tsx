@@ -59,13 +59,13 @@ const HeroSection = () => {
           
           <div className="flex justify-center space-x-6 pt-8">
             <a
-              href="#"
+              href="www.linkedin.com/in/mohit-tarwatkar-8abb76126"
               className="text-primary-foreground/70 hover:text-accent transition-colors duration-200 hover:scale-110 transform"
             >
               <Linkedin className="h-6 w-6" />
             </a>
             <a
-              href="#"
+              href="tarwatkarmohit56@gmail.com"
               className="text-primary-foreground/70 hover:text-accent transition-colors duration-200 hover:scale-110 transform"
             >
               <Mail className="h-6 w-6" />
