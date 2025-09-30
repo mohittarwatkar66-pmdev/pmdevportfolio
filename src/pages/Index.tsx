@@ -16,7 +16,7 @@ const Index = () => {
       id: "ecommerce-mobile-app",
       title: "Swish 10-minute Food Delivery",
       description: "Developed comprehensive product strategy to increase user retention from 12% to 25% through personalized experiences, feedback loops, and automated rewards system.",
-      image: project1,
+      image: swishLogo,
       tags: ["Product Strategy", "User Retention", "Food Delivery"]
     }
   ];
