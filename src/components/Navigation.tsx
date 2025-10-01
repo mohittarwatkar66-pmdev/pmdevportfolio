@@ -40,12 +40,6 @@ const Navigation = () => {
               >
                 About
               </button>
-              <button
-                onClick={() => scrollToSection("contact")}
-                className="text-foreground hover:text-accent transition-colors duration-200"
-              >
-                Contact
-              </button>
             </div>
           </div>
 
@@ -83,12 +77,6 @@ const Navigation = () => {
               className="block px-3 py-2 text-foreground hover:text-accent transition-colors duration-200 w-full text-left"
             >
               About
-            </button>
-            <button
-              onClick={() => scrollToSection("contact")}
-              className="block px-3 py-2 text-foreground hover:text-accent transition-colors duration-200 w-full text-left"
-            >
-              Contact
             </button>
           </div>
         </div>
