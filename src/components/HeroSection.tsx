@@ -8,11 +8,6 @@ const HeroSection = () => {
     element?.scrollIntoView({ behavior: "smooth" });
   };
 
-  const scrollToContact = () => {
-    const element = document.getElementById("contact");
-    element?.scrollIntoView({ behavior: "smooth" });
-  };
-
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
@@ -33,7 +28,7 @@ const HeroSection = () => {
               Hi, I'm <span className="text-accent">Mohit Tarwatkar</span>
             </h1>
             <p className="text-xl md:text-2xl text-primary-foreground/90 max-w-3xl mx-auto leading-relaxed">
-              I am an aspiring product manager with 3 years of experience in software development. I am a passionate product enthusiast willing to put my creativity, intution and knowledge to solve complex product problems while delivering growth and business results.
+              I am an aspiring product manager with 2 years of experience in software development. I am a passionate product enthusiast willing to put my creativity, intution and knowledge to solve complex product problems while delivering growth and business results.
             </p>
           </div>
           
