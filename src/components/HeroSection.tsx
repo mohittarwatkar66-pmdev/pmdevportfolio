@@ -46,15 +46,6 @@ const HeroSection = () => {
               View Case Studies
               <ArrowDown className="ml-2 h-5 w-5" />
             </Button>
-            <Button
-              onClick={scrollToContact}
-              variant="outline"
-              size="lg"
-              className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 px-8 py-3 rounded-lg backdrop-blur-sm transition-all duration-300 hover:scale-105"
-            >
-              Let's Talk
-              <Mail className="ml-2 h-5 w-5" />
-            </Button>
           </div>
           
           <div className="flex justify-center space-x-6 pt-8">
