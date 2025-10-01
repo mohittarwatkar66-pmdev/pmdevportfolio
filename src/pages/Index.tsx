@@ -75,7 +75,7 @@ const Index = () => {
                   About Me
                 </h2>
                 <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                  Aspiring Product Manager with 3 years of software development experience in C++ and service-oriented architecture, eager to blend technical expertise with product thinking to build impactful solutions.I believe great design happens when creativity meets strategy, and I'm always looking for ways to push the boundaries of what's possible.
+                  Aspiring Product Manager with 2 years of software development experience in C++ and service-oriented architecture, eager to blend technical expertise with product thinking to build impactful solutions.I believe great design happens when creativity meets strategy, and I'm always looking for ways to push the boundaries of what's possible.
                 </p>
                 <p className="text-lg text-muted-foreground leading-relaxed">
                   My approach combines user research, business strategy, and creative problem-solving to deliver solutions that not only look beautiful but also drive real results for businesses and their users.
@@ -84,7 +84,7 @@ const Index = () => {
               
               <div className="grid grid-cols-1 gap-6">
                 <div className="text-center p-4">
-                  <div className="text-3xl font-bold text-accent mb-1">5+</div>
+                  <div className="text-3xl font-bold text-accent mb-1">2+</div>
                   <div className="text-sm text-muted-foreground">Years Experience</div>
                 </div>
               </div>
