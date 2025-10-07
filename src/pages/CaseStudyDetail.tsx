@@ -87,7 +87,7 @@ const CaseStudyDetail = () => {
       <Navigation />
       
       {/* Header */}
-      <section className="py-20 bg-muted/30">
+      <section className="py-20 bg-gradient-to-br from-green-50/50 to-muted/30 dark:from-green-950/20 dark:to-muted/30">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <Button 
             onClick={() => navigate("/")} 
@@ -175,13 +175,13 @@ const CaseStudyDetail = () => {
                   <div className="relative">
                     <Carousel className="w-full max-w-3xl mx-auto">
                       <CarouselContent>
-                        {actualSlides.map((slide, index) => (
+                         {actualSlides.map((slide, index) => (
                           <CarouselItem key={index}>
                             <div className="relative aspect-video bg-muted rounded-lg overflow-hidden shadow-lg">
                               <img 
                                 src={slide} 
                                 alt={`Slide ${index + 1}`}
-                                className="w-full h-full object-contain"
+                                className={`w-full h-full object-contain ${index === 10 ? 'rotate-180' : ''}`}
                               />
                               <div className="absolute bottom-4 right-4 bg-black/70 text-white px-3 py-1 rounded-full text-sm">
                                 {index + 1} / {actualSlides.length}

@@ -1,9 +1,12 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useLocation } from "react-router-dom";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
+  const isHomePage = location.pathname === "/";
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -20,28 +23,30 @@ const Navigation = () => {
           </div>
           
           {/* Desktop Navigation */}
-          <div className="hidden md:block">
-            <div className="flex items-baseline space-x-8">
-              <button
-                onClick={() => scrollToSection("home")}
-                className="text-foreground hover:text-accent transition-colors duration-200"
-              >
-                Home
-              </button>
-              <button
-                onClick={() => scrollToSection("portfolio")}
-                className="text-foreground hover:text-accent transition-colors duration-200"
-              >
-                Portfolio
-              </button>
-              <button
-                onClick={() => scrollToSection("about")}
-                className="text-foreground hover:text-accent transition-colors duration-200"
-              >
-                About
-              </button>
+          {isHomePage && (
+            <div className="hidden md:block">
+              <div className="flex items-baseline space-x-8">
+                <button
+                  onClick={() => scrollToSection("home")}
+                  className="text-foreground hover:text-accent transition-colors duration-200"
+                >
+                  Home
+                </button>
+                <button
+                  onClick={() => scrollToSection("portfolio")}
+                  className="text-foreground hover:text-accent transition-colors duration-200"
+                >
+                  Portfolio
+                </button>
+                <button
+                  onClick={() => scrollToSection("about")}
+                  className="text-foreground hover:text-accent transition-colors duration-200"
+                >
+                  About
+                </button>
+              </div>
             </div>
-          </div>
+          )}
 
           {/* Mobile menu button */}
           <div className="md:hidden">
@@ -57,7 +62,7 @@ const Navigation = () => {
       </div>
 
       {/* Mobile Navigation */}
-      {isMenuOpen && (
+      {isMenuOpen && isHomePage && (
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 bg-background border-b border-border">
             <button
